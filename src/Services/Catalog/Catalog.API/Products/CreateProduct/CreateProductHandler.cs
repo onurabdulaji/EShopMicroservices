@@ -18,10 +18,6 @@
     {
         public async Task<CreateProductResult> Handle(CreateProductCommand command, CancellationToken cancellationToken)
         {
-            // Bussiness Logic To Create Product
-            // Create Product Entity From Command Object
-            // Save To Database
-            // Return CreateProductResult Created Product Id
 
             logger.LogInformation("CreateProductCommandHandler.Handle called with command: {@command}", command);
 
@@ -34,17 +30,11 @@
                 Price = command.Price
             };
 
-
-            // save to db
-
             session.Store(product);
 
             await session.SaveChangesAsync(cancellationToken);
 
-            // retun result
-
             return new CreateProductResult(product.Id);
-                
         }
     }
 }

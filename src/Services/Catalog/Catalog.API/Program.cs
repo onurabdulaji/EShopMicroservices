@@ -9,6 +9,7 @@ builder.Services.AddMediatR(config =>
     config.RegisterServicesFromAssembly(assembly);
     //config.LicenseKey = builder.Configuration.GetValue<string>("MediatR:LicenseKey");
     config.AddOpenBehavior(typeof(ValidationBehaviour<,>));
+    config.AddOpenBehavior(typeof(LoggingBehaviour<,>));
 });
 
 builder.Services.AddValidatorsFromAssembly(assembly);
