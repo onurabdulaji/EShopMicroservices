@@ -10,13 +10,17 @@
             RuleFor(q=>q.Cart.UserName).NotEmpty().WithMessage("UserName cannot be empty");
         }
     }
-    public class StoreBasketCommandHandler : ICommandHandler<StoreBasketCommand, StoreBasketResult>
+    public class StoreBasketCommandHandler
+        (IBasketRepository repository)
+        : ICommandHandler<StoreBasketCommand, StoreBasketResult>
     {
         public async Task<StoreBasketResult> Handle(StoreBasketCommand command, CancellationToken cancellationToken)
         {
             ShoppingCart cart = command.Cart;
 
-            return new StoreBasketResult("swn");
+            await repository.StoreBasket(command.Cart , cancellationToken);
+
+            return new StoreBasketResult(command.Cart.UserName);
         }
     }
 }
