@@ -39,11 +39,11 @@ services:
       - postgres_basket:/var/lib/postgresql/data/ 
 
 
-  # distributedcache:
-  #   container_name: distributedcache
-  #   restart: always
-  #   ports:
-  #     - "6379:6379"
+  distributedcache:
+    container_name: distributedcache
+    restart: always
+    ports:
+      - "6379:6379"
 
   # orderdb:
   #   container_name: orderdb
