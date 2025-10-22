@@ -16,6 +16,8 @@
     {
         public async Task<StoreBasketResult> Handle(StoreBasketCommand command, CancellationToken cancellationToken)
         {
+            // Communicate With gRPC For Discount Service To Retrieve Discounts For Each Item In The Cart
+
             ShoppingCart cart = command.Cart;
 
             await repository.StoreBasket(command.Cart , cancellationToken);
