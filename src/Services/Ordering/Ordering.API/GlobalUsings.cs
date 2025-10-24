@@ -8,3 +8,4 @@ global using Ordering.Infrastructure.Data.Extensions;
 global using Mapster;
 global using MediatR;
 global using Ordering.Application.Orders.Commands.UpdateOrder;
+global using Ordering.Application.Orders.Queries.GetOrdersByCustomer;
