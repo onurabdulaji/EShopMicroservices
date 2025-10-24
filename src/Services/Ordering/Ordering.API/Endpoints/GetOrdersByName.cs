@@ -1,6 +1,4 @@
-﻿using Ordering.Application.Orders.Queries.GetOrdersByName;
-
-namespace Ordering.API.Endpoints
+﻿namespace Ordering.API.Endpoints
 {
     //public record GetOrdersByNameRequest(string Name);
     public record GetOrdersByNameResponse(IEnumerable<OrderDto> Orders);

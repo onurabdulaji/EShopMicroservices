@@ -1,7 +1,4 @@
-﻿
-using Ordering.Application.Orders.Commands.DeleteOrder;
-
-namespace Ordering.API.Endpoints
+﻿namespace Ordering.API.Endpoints
 {
     //public record DeleteOrderRequest(Guid Id);
     public record DeleteOrderResponse(bool IsSuccess);

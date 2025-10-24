@@ -1,8 +1,4 @@
-﻿using Carter;
-using Mapster;
-using MediatR;
-using Ordering.Application.Dtos;
-namespace Ordering.API.Endpoints
+﻿namespace Ordering.API.Endpoints
 {
     // Accept a CreateOrderRequest object.
     // Maps The request to a CreateOrderCommand.
