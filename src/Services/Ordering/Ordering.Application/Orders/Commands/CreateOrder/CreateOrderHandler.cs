@@ -9,9 +9,6 @@ namespace Ordering.Application.Orders.Commands.CreateOrder
             // Create Order Entity from Command Object
             // Save To Db
             // Return Result
-
-
-
             throw new NotImplementedException();
         }
     }
