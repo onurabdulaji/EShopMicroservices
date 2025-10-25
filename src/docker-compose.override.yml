@@ -34,6 +34,17 @@ services:
     ports:
       - "1433:1433"
 
+  messagebroker:
+    container_name: messagebroker
+    hostname: ecommerce-mq
+    environment:
+      - RABBITMQ_DEFAULT_USER=guest
+      - RABBITMQ_DEFAULT_PASS=guest
+    restart: always
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+
   distributedcache:
     image: redis:7
     container_name: distributedcache
@@ -99,16 +110,7 @@ services:
 
   
 
-  # messagebroker:
-  #   container_name: messagebroker
-  #   hostname: ecommerce-mq
-  #   environment:
-  #     - RABBITMQ_DEFAULT_USER=guest
-  #     - RABBITMQ_DEFAULT_PASS=guest
-  #   restart: always
-  #   ports:
-  #     - "5672:5672"
-  #     - "15672:15672"
+  
 
 
   # ordering.api:
