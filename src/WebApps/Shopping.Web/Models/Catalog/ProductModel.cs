@@ -1,6 +1,4 @@
-﻿using Shopping.Web.Models.Catalog;
-
-namespace Shopping.Web.Models.Catalog
+﻿namespace Shopping.Web.Models.Catalog
 {
     public class ProductModel
     {
@@ -11,9 +9,9 @@ namespace Shopping.Web.Models.Catalog
         public string ImageFile { get; set; } = default!;
         public decimal Price { get; set; }
     }
+    //wrapper classes
+    public record GetProductsResponse(IEnumerable<ProductModel> Products);
+    public record GetProductByCategoryResponse(IEnumerable<ProductModel> Products);
+    public record GetProductByIdResponse(ProductModel Product);
 }
 
-//wrapper classes
-public record GetProductsResponse(IEnumerable<ProductModel> Products);
-public record GetProductByCategoryResponse(IEnumerable<ProductModel> Products);
-public record GetProductByIdResponse(ProductModel Product);
