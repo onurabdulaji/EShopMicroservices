@@ -7,4 +7,6 @@ global using Ordering.Domain.ValueObjects;
 global using MediatR;
 global using Microsoft.Extensions.Logging;
 global using Microsoft.EntityFrameworkCore;
+global using BuildingBlocks.Exceptions.Handler;
+global using BuildingBlocks.Exceptions.Handler;
 global using Ordering.Domain.Events;
